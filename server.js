@@ -1,9 +1,9 @@
 import express from "express";
-import Pokemon from "./poke_api.js";
+import getPokemon from "./poke_api.js";
 
 const app = express();
 
-app.get("/pokeazar", async (req, res) => {
+app.get("/pokemon", async (req, res) => {
   try {
     const pokemon = await getPokemon();
     res.json(pokemon);
@@ -13,5 +13,5 @@ app.get("/pokeazar", async (req, res) => {
 });
 
 app.listen(3000, () => {
-  console.log("Server OK");
+  console.log("Servidor escuchando en el puerto 3000");
 });

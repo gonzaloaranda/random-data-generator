@@ -1,6 +1,6 @@
 import axios from "axios";
 
-async function PokemonList() {
+async function getPokemon() {
   const randomId = Math.floor(Math.random() * 151) + 1;
   const url = `https://pokeapi.co/api/v2/pokemon/${randomId}`;
   const response = await axios.get(url);
@@ -8,4 +8,4 @@ async function PokemonList() {
   return { name, id };
 }
 
-export default PokemonList;
+export default getPokemon;
